@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <div class="top-bar">
+
+            <div>
+                <h2>Online Examination System</h2>
+
+                <p>
+                    Kalaignar Karunanidhi Institute of Technology
+                </p>
+            </div>
+
+            <a href="/logout" class="logout">
+                Logout
+            </a>
+
+        </div>
+
+
+        <div class="welcome">
+
+            <h1>
+                Welcome, {{ student.name }}
+            </h1>
+
+            <p>
+                Student Dashboard
+            </p>
+
+        </div>
+
+
+        <div class="student-card">
+
+            <h2>Student Details</h2>
+
+            <div class="details">
+
+                <div class="detail-box">
+
+                    <span>Student ID</span>
+
+                    <strong>
+                        {{ student.student_id }}
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>Name</span>
+
+                    <strong>
+                        {{ student.name }}
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>Age</span>
+
+                    <strong>
+                        {{ student.age }}
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>Department</span>
+
+                    <strong>
+                        {{ student.department }}
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>Register Number</span>
+
+                    <strong>
+                        {{ student.register_number }}
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-box">
+
+                    <span>Marks</span>
+
+                    <strong>
+                        {{ student.marks }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="modules">
+
+            <div class="module">
+                <h3>Examination</h3>
+                <p>View and attend online examinations.</p>
+            </div>
+
+            <div class="module">
+                <h3>Marks</h3>
+                <p>View your examination marks.</p>
+            </div>
+
+            <div class="module">
+                <h3>Results</h3>
+                <p>View examination results.</p>
+            </div>
+
+            <div class="module">
+                <h3>Profile</h3>
+                <p>View student information.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

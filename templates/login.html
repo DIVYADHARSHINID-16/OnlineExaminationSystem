@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Online Examination System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>Online Examination System</h1>
+
+            <h3>
+                Kalaignar Karunanidhi Institute of Technology
+            </h3>
+
+            <p class="subtitle">
+                B.Tech Student Login
+            </p>
+
+            {% if error %}
+
+                <div class="error">
+                    {{ error }}
+                </div>
+
+            {% endif %}
+
+            <form action="/login" method="POST">
+
+                <label>Student ID</label>
+
+                <input
+                    type="text"
+                    name="student_id"
+                    placeholder="Enter Student ID"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit">
+                    LOGIN
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
